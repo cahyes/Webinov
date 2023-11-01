@@ -46,8 +46,12 @@ h2 {
   margin-bottom: 20px;
   font-weight: bold;
 }
-#offer-section {
+#offer-section,
+#register-section {
   padding: 80px 100px;
+}
+h2 {
+  font-size: 60px;
 }
 #offer-section ul {
   list-style: none;
@@ -61,9 +65,6 @@ h2 {
   background-color: #202020;
 }
 
-#register-section {
-  padding: 100px 100px;
-}
 #register-section button {
   background-color: #ff8a00bf;
 }
@@ -116,7 +117,8 @@ footer .footer_content .content ul li a {
 }
 
 @media screen and (max-width: 600px) {
-  h1 {
+  h1,
+  h2 {
     font-size: 45px;
   }
 }
