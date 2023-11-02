@@ -79,6 +79,12 @@ footer .footer_content .content ul li a {
   font-size: 18px;
 }
 
+.category_box li{
+  margin: 0 10px 0 10px;
+  list-style-type: none;
+  display: inline-block;
+}
+
 /* RESPONSIVE */
 @media screen and (max-width: 900px) {
   #hero-section,
