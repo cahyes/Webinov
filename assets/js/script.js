@@ -1,19 +1,18 @@
-const orderBtn = document.getElementById("getStart");
+const getStartBtn = document.getElementById("getStart");
 const packageSection = document.querySelector("#package-section");
 
 // tombol order
-const lowOrderBtn = document.getElementById("lowOrder");
-const HighOrderBtn = document.getElementById("highOrder");
+const startupBtn = document.getElementById("startupBtn");
+const businessBtn = document.getElementById("businessBtn");
 
 // fungsi popup menu
-orderBtn.addEventListener("click", function () {
+getStartBtn.addEventListener("click", function () {
   packageSection.style.display = "flex";
   packageSection.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
   packageSection.style.margin = "auto";
   packageSection.style.position = "fixed";
   packageSection.style.top = "0";
 });
-
 packageSection.addEventListener("click", function (event) {
   if (event.target === packageSection) {
     packageSection.style.display = "none";
@@ -21,39 +20,34 @@ packageSection.addEventListener("click", function (event) {
 });
 
 // fungsi order save ke local storage
-lowOrderBtn.addEventListener("click", function () {
+startupBtn.addEventListener("click", function () {
   // Ambil data dari localStorage jika sudah ada, atau set nilai awal jika belum ada
-  var lowOrderQuantity = parseInt(localStorage.getItem("lowOrderQuantity")) || 0;
-  var lowOrderTotal = parseInt(localStorage.getItem("lowOrderTotal")) || 0;
-
+  let startupQuantity = parseInt(localStorage.getItem("startupQuantity")) || 0;
+  let startupTotal = parseInt(localStorage.getItem("startupTotal")) || 0;
   // Tambah jumlah dan total
-  lowOrderQuantity += 1;
-  lowOrderTotal += 250000;
-
+  startupQuantity += 1;
+  startupTotal += 250000;
   // Simpan data ke localStorage
-  localStorage.setItem("lowOrderQuantity", lowOrderQuantity);
-  localStorage.setItem("lowOrderTotal", lowOrderTotal);
+  localStorage.setItem("startupQuantity", startupQuantity);
+  localStorage.setItem("startupTotal", startupTotal);
 
   // berhasil simpan data
   alert("berhasil simpan data");
 });
 
-// Ambil tombol "highOrder" dari DOM
-var highOrderButton = document.getElementById("highOrder");
-
 // Tambahkan event listener untuk saat tombol "highOrder" ditekan
-highOrderButton.addEventListener("click", function () {
+businessBtn.addEventListener("click", function () {
   // Ambil data dari localStorage jika sudah ada, atau set nilai awal jika belum ada
-  var highOrderQuantity = parseInt(localStorage.getItem("highOrderQuantity")) || 0;
-  var highOrderTotal = parseInt(localStorage.getItem("highOrderTotal")) || 0;
+  let businessQuantity = parseInt(localStorage.getItem("businessQuantity")) || 0;
+  let businessTotal = parseInt(localStorage.getItem("businessTotal")) || 0;
 
-  // Tambahkan jumlah dan total
-  highOrderQuantity += 1;
-  highOrderTotal += 500000;
+  // tambah pada data paket business
+  businessQuantity += 1;
+  businessTotal += 500000;
 
   // Simpan data ke localStorage
-  localStorage.setItem("highOrderQuantity", highOrderQuantity);
-  localStorage.setItem("highOrderTotal", highOrderTotal);
+  localStorage.setItem("businessQuantity", businessQuantity);
+  localStorage.setItem("businessTotal", businessTotal);
 
   // berhasil simpan data
   alert("berhasil simpan data");
