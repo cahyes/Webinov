@@ -1,3 +1,4 @@
+
 :root {
   --primary: #5350FF;
   --secondary: #4777F5;
@@ -9,6 +10,7 @@
 body{
   font-family: 'Poppins', sans-serif;
 }
+
 
 .title {
   width: 750px;
@@ -77,7 +79,9 @@ footer .footer_content .content ul li a:hover {
   .slash {
     display: none;
   }
-}/*# sourceMappingURL=about.css.map */
+
+}
+/*# sourceMappingURL=about.css.map */
 
 #portfolio-flters .btn {
   position: relative;
@@ -142,3 +146,6 @@ footer .footer_content .content ul li a:hover {
   opacity: 1;
   transition-delay: .15s;
 }
+
+}/*# sourceMappingURL=about.css.map */
+
