@@ -1,5 +1,44 @@
 const getStartBtn = document.getElementById("getStart");
 const packageSection = document.querySelector("#package-section");
+const categoryBox = document.querySelector('.category_box');
+const inputSearchCategory = document.querySelector('.search_category');
+
+// fake database
+const datas = [
+    "Personal Blog",
+    "Company Blog",
+    "Travel Blog",
+    "Organizing Blog",
+    "Personal Portofolio",
+    "Company Portofolio",
+    "Online Store",
+    "E-Comeerce",
+    "Restaurant",
+    "Hotel Booking",
+    "Car Booking"
+]
+
+// ketika keyboard ditekan
+inputSearchCategory.onkeyup = function(){
+    let result = []
+    let input = inputSearchCategory.value
+    if(input.length){
+        result = datas.filter((keyword) => {
+            return keyword.toLocaleLowerCase().includes(input.toLocaleLowerCase())
+        })
+    }
+    display(result)
+}
+
+// fungsi tampil ke layar
+function display(result){
+    const content = result.map((list) => {
+        return `<li>
+                  <button class="btn btn-outline-dark">${list}</button>
+                </li>`
+    })
+    categoryBox.innerHTML = `<ul>${content.join('')}</ul>`
+}
 
 // tombol order
 const startupBtn = document.getElementById("startupBtn");
