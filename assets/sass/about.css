@@ -1,16 +1,13 @@
-
 :root {
-  --primary: #5350FF;
-  --secondary: #4777F5;
-  --light: #F7FAFF;
-  --dark: #1D1D27;
+  --primary: #5350ff;
+  --secondary: #4777f5;
+  --light: #f7faff;
+  --dark: #1d1d27;
 }
 
-
-body{
-  font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
-
 
 .title {
   width: 750px;
@@ -26,7 +23,7 @@ body{
 .title .title div {
   width: 500px;
   height: 100px;
-  background: #FBFF38;
+  background: #fbff38;
   position: absolute;
   z-index: -1;
   margin: 100px 0 0 110px;
@@ -35,7 +32,7 @@ body{
 footer {
   color: white;
   width: 100%;
-  background: #5350FF;
+  background: #5350ff;
   padding: 30px;
   display: flex;
   justify-content: start;
@@ -79,7 +76,6 @@ footer .footer_content .content ul li a:hover {
   .slash {
     display: none;
   }
-
 }
 /*# sourceMappingURL=about.css.map */
 
@@ -87,7 +83,7 @@ footer .footer_content .content ul li a:hover {
   position: relative;
   display: inline-block;
   margin: 10px 4px 0 4px;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 #portfolio-flters .btn::after {
@@ -97,7 +93,7 @@ footer .footer_content .content ul li a:hover {
   bottom: -1px;
   border-left: 20px solid transparent;
   border-right: 0 solid transparent;
-  border-bottom: 50px solid #FFFFFF;
+  border-bottom: 50px solid #ffffff;
 }
 
 #portfolio-flters .btn:hover,
@@ -117,7 +113,7 @@ footer .footer_content .content ul li a:hover {
   top: 0;
   left: 0;
   background: var(--primary);
-  transition: .5s;
+  transition: 0.5s;
   z-index: 1;
   opacity: 0;
 }
@@ -137,15 +133,20 @@ footer .footer_content .content ul li a:hover {
   justify-content: center;
   background: url(../img/icon-shape-white.png) center center no-repeat;
   border: none;
-  transition: .5s;
+  transition: 0.5s;
   opacity: 0;
   z-index: 2;
 }
 
 .portfolio-item:hover .btn {
   opacity: 1;
-  transition-delay: .15s;
+  transition-delay: 0.15s;
 }
 
-}/*# sourceMappingURL=about.css.map */
+/*# sourceMappingURL=about.css.map */
 
+@media (max-width: 990px) {
+  .slash {
+    display: none;
+  }
+} /*# sourceMappingURL=about.css.map */
