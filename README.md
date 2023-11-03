@@ -1,1 +1,1 @@
-ini adalah FInal Project 1 dari kegiata MSIB- PT Haktivate Teknologi Indonesia
+ini adalah FInal Project 1 dari kegiatan MSIB- PT Haktivate Teknologi Indonesia
