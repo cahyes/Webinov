@@ -1,6 +1,6 @@
 // TODOS
 //ambil element
-const startQuantityEl = document.querySelector(".startQuanity");
+const startQuantityEl = document.querySelector(".startQuantity");
 const startTotalEl = document.querySelector(".startTotal");
 const addStartBtn = document.querySelector(".addStartBtn");
 const subStartBtn = document.querySelector(".subStartBtn");
@@ -12,6 +12,8 @@ const subBusinessBtn = document.querySelector(".subBusinessBtn");
 
 const totalQuantityEl = document.querySelector(".totalQuantity");
 const totalPriceEl = document.querySelector(".totalPrice");
+
+const checkoutBtn = document.getElementById("checkout");
 
 // mengambil data local storage
 const startupOrder = {
@@ -36,6 +38,7 @@ function updateTotal() {
 }
 updateTotal();
 
+// update data local storage
 function updateData(key, increment) {
   if (key === "startupQuantity") {
     startupOrder.startupQuantity += increment;
@@ -53,6 +56,7 @@ function updateData(key, increment) {
   }
 }
 
+// ketika tombol add dan subtract diklik
 addStartBtn.addEventListener("click", function () {
   updateData("startupQuantity", 1);
 });
@@ -68,4 +72,10 @@ subBusinessBtn.addEventListener("click", function () {
   if (businessOrder.businessQuantity > 0) {
     updateData("businessQuantity", -1);
   }
+});
+
+// hapus semua data local storage dan reload halaman
+checkoutBtn.addEventListener("click", function () {
+  localStorage.clear();
+  location.reload();
 });

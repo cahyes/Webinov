@@ -17,12 +17,12 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand fw-bold fs-2 mb-1 ms-3" href="index.html">Webinov</a>
+        <a class="navbar-brand fw-bolder fs-2 mb-1 ms-3" href="index.html">Webinov</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav mb-1 mb-lg-0 end">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
@@ -35,41 +35,36 @@
             <li class="nav-item">
               <a class="nav-link" href="todos.html">Todos</a>
             </li>
-          </ul>
-          <ul class="navbar-nav me-2 mb-1">
-            <li class="nav-item mt-2">
-              <a href="#" class="nav-link">About us</a>
+            <li class="nav-item">
+              <a href="./pages/about.html" class="nav-link">About us</a>
             </li>
-            <li class="nav-item mt-3 slash">
-              <p>|</p>
-            </li>
-            <li class="nav-item mt-2">
+
+            <li class="nav-item">
               <a href="contact.html" class="nav-link">Contact</a>
             </li>
           </ul>
-          <div class="login mt-1m me-3">
-            <a href="#" class="text-primary link-underline link-underline-opacity-0 me-2 fw-bold">Login</a>
-            <button class="btn btn-primary rounded-pill fw-bold">Register</button>
-          </div>
+          <ul class="navbar-nav me-2 mb-1"></ul>
         </div>
       </div>
     </nav>
 
-    <section class="continer-fluid w-75 p-5 m-auto shadow">
+    <section class="continer-fluid w-75 p-5 m-auto my-5 shadow rounded-4">
       <div class="w-100 m-auto">
-        <h1 class="text-light text-center" style="background-color: #5350ff">Order Form</h1>
-        <table class="table m-auto">
+        <h2 class="text-light text-center py-2" style="background-color: #5350ff">Order Form</h2>
+        <table class="table table-bordered m-auto text-center fs-5">
           <thead>
-            <tr>
-              <th scope="row">Package</th>
-              <td>Quantity</td>
-              <td>Price</td>
+            <tr class="text-light">
+              <th scope="row" class="text-bg-primary">Package</th>
+              <th class="text-bg-primary">Quantity</th>
+              <th class="text-bg-primary">Price</th>
+              <th class="text-bg-primary">Add</th>
+              <th class="text-bg-primary">Subtract</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">Start Up</th>
-              <td class="startQuanity">--</td>
+              <td class="startQuantity">--</td>
               <td class="startTotal">--</td>
               <td><button class="addStartBtn">+</button></td>
               <td><button class="subStartBtn">-</button></td>
@@ -81,17 +76,22 @@
               <td><button class="addBusinessBtn">+</button></td>
               <td><button class="subBusinessBtn">-</button></td>
             </tr>
-            <tr>
+            <tr class="fw-bolder">
               <th scope="row">Total</th>
               <td class="totalQuantity">--</td>
               <td class="totalPrice">--</td>
+              <td></td>
+              <td></td>
             </tr>
           </tbody>
         </table>
+        <div class="text-end">
+          <button class="btn btn-warning shadow-lg mt-3" id="checkout">Checkout</button>
+        </div>
       </div>
     </section>
 
-    <footer>
+    <footer class="justify-content-center">
       <div class="footer_brand mt-3">
         <p class="fs-2 fw-bold">Webinov</p>
         <div class="footer_sub">
